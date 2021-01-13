@@ -1,0 +1,31 @@
+p {
+  font-family: 'Libre Caslon Text', serif;
+  font-size: 16px;
+  overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    hyphenate-limit-chars: 9 3 3;
+}
+.flex-container {
+    position: relative;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 20px;
+    overflow: scroll;
+}
+
+@media screen and (max-width: 800px) {
+
+  html, body { overflow-x: hidden }
+
+  .flex-container{
+  position:relative;
+  box-sizing: border-box;
+  width: 99%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  /* margin-top: 8%; */
+}
