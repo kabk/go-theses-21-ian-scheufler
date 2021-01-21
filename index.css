@@ -4,6 +4,8 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
+  height: 90vh;
+
   background-size: 600px 1100px; /* custom ratio */
   /* background-size: 100%; */ /* proportional sizing */
 }
@@ -57,8 +59,16 @@ p {
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 75vh;
+
   /* padding: 20px; */
   /*overflow: scroll;*/
+}
+
+img{
+  width: 80%;
+  margin-left: 25%;
+  margin-right: 25%;
+
 }
 
 .rectangle {
@@ -66,6 +76,7 @@ p {
   width: auto;
   background-color: white;
   border-radius: 10px;
+  border: 1px black;
 
   /*margin-top: 75%;*/
   padding: 2em 2em 2em 2em;
@@ -75,10 +86,12 @@ p {
   html,
   body {
     overflow-x: hidden;
+    height: 100vh;
+    background-size: contain;
   }
 
   .bg {
-    height: 100%;
+    width: 100vw;
   }
 
   .flex-container {
