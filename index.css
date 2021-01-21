@@ -1,61 +1,64 @@
-body{
-  background-image: url("src/bg.png");
+body {
+  background-image: url("src/bg.gif");
   background-color: black;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 600px 1100px;
-
-
+  background-size: 600px 1100px; /* custom ratio */
+  /* background-size: 100%; */ /* proportional sizing */
 }
 
-@font-face { font-family: "Micky"; src: url("Micky.ttf"); }
 
- h1{
-   font-family: Micky;
-   font-size: 70px;
-   color: black;
-   overflow-wrap: break-word;
-     word-wrap: break-word;
-     -webkit-hyphens: auto;
-     -ms-hyphens: auto;
-     hyphens: auto;
- }
+@font-face {
+  font-family: "Micky";
+  src: url("Micky.ttf");
+}
+
+h1 {
+  font-family: Micky;
+  font-size: 70px;
+  color: black;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
 
 p {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: 'Courier Prime';
   font-size: 16px;
   color: black;
   overflow-wrap: break-word;
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    hyphenate-limit-chars: 9 3 3;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 9 3 3;
 }
 
 .quote {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: "Libre Caslon Text", serif;
   font-style: italic;
   font-size: 16px;
   text-align: center;
   color: black;
   overflow-wrap: break-word;
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    hyphenate-limit-chars: 9 3 3;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 9 3 3;
 }
 
 .flex-container {
-    position: relative;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 75vh;
-    padding: 20px;
-    /*overflow: scroll;*/
+  position: relative;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 75vh;
+  /* padding: 20px; */
+  /*overflow: scroll;*/
 }
 
 .rectangle {
@@ -65,24 +68,34 @@ p {
   border-radius: 10px;
 
   /*margin-top: 75%;*/
+  padding: 2em 2em 2em 2em;
 }
 
 @media screen and (max-width: 800px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 
-  html, body { overflow-x: hidden }
+  .bg {
+    height: 100%;
+  }
 
-bg{
-  height: 100%;
+  .flex-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 99%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+
+    /* margin-top: 8%; */
+  }
 }
 
-
-
-  .flex-container{
-  position:relative;
-  box-sizing: border-box;
-  width: 99%;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
-
-  /* margin-top: 8%; */
+.flex-container svg {
+  stroke: #000;
+  fill: #fff;
+  margin-bottom:-12px;
+  margin-left: -1.5px;
+  stroke-width: 1px;
 }
